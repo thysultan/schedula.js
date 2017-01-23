@@ -66,6 +66,7 @@ fiber.push(true, foo, foo.bar, 3, [1, 2]);
 fiber.flush(true); 
 
 // manually flush low priority work, without throttling
+fiber.flush(false);
 ```
 
 - [work cycle timeline visuals](https://rawgit.com/thysultan/schedula.js/master/examples/index.html)
