@@ -22,14 +22,10 @@
 	var Promise = window.Promise;
 	var requestAnimationFrame = window.requestAnimationFrame;
 	var setImmediate = window.setImmediate;
+
 	var scheduleCallback;
 
-	if (Promise !== void 0) {
-		scheduleCallback = function scheduleCallback (callback) { 
-			Promise.resolve().then(callback); 
-		}
-	}
-	else if (requestAnimationFrame !== void 0) {
+	if (requestAnimationFrame !== void 0) {
 		scheduleCallback = function scheduleCallback (callback) { 
 			requestAnimationFrame(callback);
 		}
@@ -37,6 +33,11 @@
 	else if (setImmediate !== void 0) {
 		scheduleCallback = function scheduleCallback (callback) { 
 			requestIdleCallback(callback); 
+		}
+	}
+	else if (Promise !== void 0) {
+		scheduleCallback = function scheduleCallback (callback) { 
+			Promise.resolve().then(callback); 
 		}
 	}
 	else {
@@ -117,7 +118,7 @@
 
 			// within budget, do work now
 			if (delta > budget) {
-				lastTime = time - (delta % budget);
+				lastTime = time - delta % budget;
 				
 				if (highPriorityLength !== 0) {
 					flush(true);
@@ -139,7 +140,7 @@
 			else {
 				lowPriority[lowPriorityLength++] = [context, callback, length, args];
 			}
-
+			
 			// throttled scheduler
 			scheduleCallback(throttle);
 		}

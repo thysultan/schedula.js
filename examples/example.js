@@ -9,9 +9,12 @@ fiber.push(true, null, (a, b) => {
 	var b = document.getElementById('b');
 	var c = document.getElementById('c');
 
-	var aWidth = 300;
-	var bWidth = 300;
-	var cWidth = 300;
+	var max = 800;
+	var max2 = max+1;
+
+	var aWidth = max;
+	var bWidth = max;
+	var cWidth = max;
 
 	a.style.width = aWidth + 'px';
 	b.style.width = bWidth + 'px';
@@ -23,7 +26,7 @@ fiber.push(true, null, (a, b) => {
 
 	// schedula
 	var id = setInterval(function () {
-		if (aWidth !== 301) {
+		if (aWidth !== max2) {
 			fiber.push(true, null, animate, 1, [aWidth++]);
 		}
 	}, 1000/60);
@@ -39,7 +42,7 @@ fiber.push(true, null, (a, b) => {
 	}
 
 	function anim () {
-		if (bWidth === 300) {
+		if (bWidth === max) {
 			return false;
 		}
 		bWidth += 1;
@@ -49,7 +52,7 @@ fiber.push(true, null, (a, b) => {
 
 	// setInterval
 	var id2 = setInterval(function() {
-		if (cWidth !== 300) {
+		if (cWidth !== max) {
 			cWidth += 1;
 			c.style.width = cWidth + 'px';
 		}
@@ -68,4 +71,3 @@ fiber.push(true, null, (a, b) => {
 	document.getElementById('reset').addEventListener('click', start);
 })();
 
-console.log(fiber.work);
