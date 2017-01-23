@@ -4,7 +4,7 @@ priority based work scheduler for javascript.
 
 - ~700 bytes minified+gzipped
 
-[![npm](https://img.shields.io/npm/v/schedula.js.svg?style=flat)](https://www.npmjs.com/package/schedula.js) [![licence](https://img.shields.io/badge/licence-MIT-blue.svg?style=flat)](https://github.com/thysultan/schedula.js/blob/master/LICENSE.md)
+[![npm](https://img.shields.io/npm/v/schedula.svg?style=flat)](https://www.npmjs.com/package/schedula) [![licence](https://img.shields.io/badge/licence-MIT-blue.svg?style=flat)](https://github.com/thysultan/schedula.js/blob/master/LICENSE.md)
 
 
 ## Browser Support
@@ -73,6 +73,8 @@ fiber.flush(true);
 
 // manually flush low priority work, without throttling
 ```
+
+- [work cycle timeline visuals](https://rawgit.com/thysultan/schedula.js/master/examples/index.html)
 
 ## API
 
