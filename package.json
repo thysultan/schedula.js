@@ -1,0 +1,33 @@
+{
+	"name": "schedula",
+	"main": "schedula.js",
+	"description": "priority based work scheduler for javascript",
+	"version": "0.1.0",
+	"homepage": "https://github.com/thysultan/schedula.js",
+	"license": "MIT",
+	"author": {
+		"name": "Sultan Tarimo",
+		"email": "sultantarimo@me.com"
+	},
+	"keywords": [
+		"timer",
+		"worker",
+		"async",
+		"priority",
+		"schedule",
+		"scheduler",
+		"schedula",
+		"schedula.js"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/thysultan/schedula.js"
+	},
+	"bugs": {
+		"url": "https://github.com/thysultan/schedula.js/issues"
+	},
+	"scripts": {
+		"test": "node ./tests/"
+	},
+	"files": ["schedula.min.js", "schedula.js"]
+}
