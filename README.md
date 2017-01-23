@@ -1,4 +1,4 @@
-# Schedula.js 
+# schedula.js 
 
 priority based work scheduler for javascript.
 
