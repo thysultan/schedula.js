@@ -36,12 +36,6 @@ priority based work scheduler for javascript.
 npm install md.js --save
 ```
 
-#### Useage
-
-```javascript
-
-```
-
 ## Examples
 
 ```javascript
