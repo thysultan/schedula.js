@@ -33,7 +33,7 @@ priority based work scheduler for javascript.
 #### npm
 
 ```
-npm install md.js --save
+npm install schedula.js --save
 ```
 
 ## Examples
