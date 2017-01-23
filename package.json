@@ -2,7 +2,7 @@
 	"name": "schedula",
 	"main": "schedula.js",
 	"description": "priority based work scheduler for javascript",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"homepage": "https://github.com/thysultan/schedula.js",
 	"license": "MIT",
 	"author": {

@@ -32,7 +32,7 @@
 	}
 	else if (setImmediate !== void 0) {
 		scheduleCallback = function scheduleCallback (callback) { 
-			requestIdleCallback(callback); 
+			setImmediate(callback); 
 		}
 	}
 	else if (Promise !== void 0) {
@@ -140,7 +140,7 @@
 			else {
 				lowPriority[lowPriorityLength++] = [context, callback, length, args];
 			}
-			
+
 			// throttled scheduler
 			scheduleCallback(throttle);
 		}

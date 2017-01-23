@@ -27,7 +27,7 @@ priority based work scheduler for javascript.
 #### CDN
 
 ```html
-<script src=https://unpkg.com/schedula.js@0.1.1/schedula.min.js></script>
+<script src=https://unpkg.com/schedula.js@0.1.2/schedula.min.js></script>
 ```
 
 #### npm
